@@ -1,0 +1,11 @@
+[book]
+authors = ["Tianjiao Huang"]
+language = "en"
+multilingual = false
+src = "src"
+title = "CS273A: Intro to Machine Learning"
+
+[output.katex]
+[output.html]
+
+[preprocessor.katex]
