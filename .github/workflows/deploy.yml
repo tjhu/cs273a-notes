@@ -11,12 +11,24 @@ jobs:
     concurrency:
       group: ${{ github.workflow }}-${{ github.ref }}
     steps:
-      - uses: actions/checkout@v2
-
-      - name: Setup mdBook
-        uses: peaceiris/actions-mdbook@v1
+      - name: Install Rust stable toolchain
+        uses: actions-rs/toolchain@v1
         with:
-          mdbook-version: '0.4.21'
+          toolchain: stable
+
+      - name: Setup mdbook
+        uses: actions-rs/install@v0.1
+        with:
+          crate: mdbook
+          version: 0.4.21
+
+      - name: Setup mdbook-katex
+        uses: actions-rs/install@v0.1
+        with:
+          crate: mdbook-katex
+          version: 0.2.10
+
+      - uses: actions/checkout@v2
 
       - name: Build
         run: mdbook build
