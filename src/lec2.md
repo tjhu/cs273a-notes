@@ -36,3 +36,42 @@
 
 * To find the best $\theta$ to minize the loss, we can visualize the error doing the isocontour plot(TODO: figure).
 * Find the gradient and go the opposite way and we will head towards the direction of the smallest loss.
+* Multiple ways to speed up the convergence
+  * Big-small steps
+  * Momentum
+    * Keep going in the current momentum's direction
+  * Second order method such as Newton's method
+    * fast
+    * expensive when the number of dimensions is high
+
+#### Stochastic/online gradient descent(SGD)
+
+One random data point, instead of all data points, at a time.
+
+Benefits:
+
+* more update per pass
+* computationally faster
+
+Draw back:
+
+* no longer strictly descent
+* don't know when to terminate
+
+#### Batched SGD
+
+A batch of data at a time to provide a good balance between GD and SGD.
+
+### Algribic solver
+
+* MSE can be solved algebricly(TODO: add equation)
+* When the number of data is big, it could be very expensive.
+
+
+### Outliers
+
+MSE is very sensitive to outliers.
+
+#### L1 error
+
+Mean Absolute Error
