@@ -185,7 +185,46 @@
 <ul>
 <li>To find the best <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">θ</span></span></span></span> to minize the loss, we can visualize the error doing the isocontour plot(TODO: figure).</li>
 <li>Find the gradient and go the opposite way and we will head towards the direction of the smallest loss.</li>
+<li>Multiple ways to speed up the convergence
+<ul>
+<li>Big-small steps</li>
+<li>Momentum
+<ul>
+<li>Keep going in the current momentum's direction</li>
 </ul>
+</li>
+<li>Second order method such as Newton's method
+<ul>
+<li>fast</li>
+<li>expensive when the number of dimensions is high</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="stochasticonline-gradient-descentsgd"><a class="header" href="#stochasticonline-gradient-descentsgd">Stochastic/online gradient descent(SGD)</a></h4>
+<p>One random data point, instead of all data points, at a time.</p>
+<p>Benefits:</p>
+<ul>
+<li>more update per pass</li>
+<li>computationally faster</li>
+</ul>
+<p>Draw back:</p>
+<ul>
+<li>no longer strictly descent</li>
+<li>don't know when to terminate</li>
+</ul>
+<h4 id="batched-sgd"><a class="header" href="#batched-sgd">Batched SGD</a></h4>
+<p>A batch of data at a time to provide a good balance between GD and SGD.</p>
+<h3 id="algribic-solver"><a class="header" href="#algribic-solver">Algribic solver</a></h3>
+<ul>
+<li>MSE can be solved algebricly(TODO: add equation)</li>
+<li>When the number of data is big, it could be very expensive.</li>
+</ul>
+<h3 id="outliers"><a class="header" href="#outliers">Outliers</a></h3>
+<p>MSE is very sensitive to outliers.</p>
+<h4 id="l1-error"><a class="header" href="#l1-error">L1 error</a></h4>
+<p>Mean Absolute Error</p>
 
                     </main>
 
