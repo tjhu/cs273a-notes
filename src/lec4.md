@@ -35,3 +35,9 @@ Negative log likely hood is very smooth.
 
 - model $\sigma(\theta X^T)$ as a probability
 - just another loss function like MSE
+- the regularization term wo
+
+## Multi-class linear classifiers
+
+- one classifier per class
+- during training, we update the $\theta$ for just the class with the highest response
