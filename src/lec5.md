@@ -10,3 +10,7 @@
 
 - let vector $w$ to be perpendicular to the boundary
 - so like we try to maximum the width wich is $\sum_j w^2_j$
+
+### Dual Form SVM
+
+remember both the alphas and the support vectors
